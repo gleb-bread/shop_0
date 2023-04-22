@@ -1,0 +1,36 @@
+.products
+    &__wrapper
+        background-color: #d6d4d8
+        font-family: "Unbounded", sans-serif
+        padding: 50px 80px
+    &__title
+        font-size: 56px
+        color: $darkColor
+    &__list
+        display: flex
+        flex-wrap: wrap
+        &__cart
+            width:300px
+            background-color: #FFF
+            padding: 30px 10px
+            text-align: center
+            margin-right: 100px
+            margin-bottom: 60px
+            &:nth-child(4n)
+                margin-right: 0
+            &__icon
+                height: 300px
+                background: url('./img/product1.jpg')
+                background-size: 120%
+                background-position: center
+                background-repeat: no-repeat
+            &__name
+                margin-bottom: 10px
+                &>span
+                    font-size: 22px
+            &__country
+                margin-bottom: 40px
+                &>span
+                    font-size: 22px
+            &__price
+                font-size: 32px

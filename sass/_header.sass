@@ -1,0 +1,132 @@
+.header
+    &__wrapper
+        position: relative
+        background: url("./../style/img/header__bg.jpg")
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+    &__filter
+            width: 100%
+            height: 100%
+
+            background-color: rgba(0, 0, 0, .5)
+        
+    &__nav
+        &__menu
+            margin: 0
+            margin-block: 0
+            padding: 0
+
+            display: flex
+
+
+            font-family: "Unbounded", sans-serif
+            font-size: 19px
+
+            list-style: none
+
+            width: 500px
+
+            display: flex
+            justify-content: space-between
+
+        &__wrapper
+            color: $lightColor
+
+            height: 100px
+
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            padding: 0 80px
+
+            box-sizing: border-box
+    
+    &__logo
+        height: 70px
+        width: 70px
+        
+        &__png
+            width: 100%
+            height: 100%
+    &__right-block
+        display: flex
+
+    &__search
+        &__wrapper
+            display: flex
+            border-bottom: 1px solid $lightColor
+        &__btn
+            margin-right: 10px
+        &__input
+            font-family: "Istok Web", sans-serif
+            border: none
+            box-sizing: border-box
+            margin: 0
+            padding: 0
+            background-color: rgba(0, 0, 0, 0)
+            color: $lightColor
+            &::placeholder
+                color: $lightColor
+            &:active, 
+            &:hover, 
+            &:focus
+                outline: 0
+                outline-offset: 0
+    &__icons
+        margin-left: 70px
+        &__wrapper
+            display: flex
+        &__user
+            margin-right: 10px
+    &__main
+        &__wrapper
+            padding: 0 80px
+            height: 500px
+            display: flex
+            flex-direction: column
+            justify-content: center
+        &__text
+            color: $lightColor
+            margin-bottom: 50px
+            &__wrapper
+                display: flex
+                justify-content: space-between
+                font-family: "Unbounded", sans-serif
+            
+            &__title
+                font-size: 45px
+                margin: 0
+                margin-bottom: 20px
+            &__name
+                font-size: 65px
+                margin: 0
+                margin-bottom: 35px
+            &__description
+                font-size: 16px
+                margin-bottom: 30px
+        &__links
+            &__items
+                display: flex
+                flex-direction: column
+                flex-wrap: wrap
+                justify-content: space-between
+            &__item
+                &__link
+                    display: block
+                    align-content: center
+                    margin-bottom: 20px
+        &__btn
+            &-buy
+                display: flex
+                align-items: center
+                justify-content: center
+                color: $lightColor
+                border: 3px solid $lightColor
+                width:  200px
+                height: 50px
+                font-family: "Unbounded", sans-serif
+                &__icon
+                    margin-right: 15px
+                
