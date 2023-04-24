@@ -2,6 +2,7 @@
     &__wrapper
         padding: 50px 80px 
         font-family: "Unbounded", sans-serif
+        text-align: center
     &__title
         &-s
             text-align: center
@@ -17,6 +18,7 @@
             display: flex
             justify-content: center
             justify-content: space-between
+            margin-bottom: 50px
         &__content
             &__wrapper
                 display: flex
@@ -60,3 +62,15 @@
                 display: flex
                 justify-content: center
                 align-items: center
+        &__items
+            display: inline-flex
+        &__item
+            &__no-select
+                background-color: #696969
+            &__select
+                background-color: #232323
+div[class^="reviews__carusel__item__"]
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    margin-right: 15px
