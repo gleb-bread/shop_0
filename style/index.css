@@ -15,17 +15,39 @@ ul {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.header__nav {
+  height: 100px;
+  box-sizing: border-box;
+}
 .header__nav__menu {
   margin: 0;
   margin-block: 0;
   padding: 0;
-  display: flex;
+  width: 100%;
+  height: 100%;
   font-family: "Unbounded", sans-serif;
   font-size: 19px;
   list-style: none;
   width: 500px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.header__nav__menu__link {
+  color: #FFF;
+  text-decoration: none;
+}
+.header__nav__menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+.header__nav__menu__item:hover > a {
+  color: #7A0007;
 }
 .header__nav__wrapper {
   color: #FFF;
@@ -81,6 +103,10 @@ ul {
 }
 .header__icons__user {
   margin-right: 10px;
+  cursor: pointer;
+}
+.header__icons__basket {
+  cursor: pointer;
 }
 .header__main__wrapper {
   padding: 0 80px;
@@ -132,6 +158,14 @@ ul {
   width: 200px;
   height: 50px;
   font-family: "Unbounded", sans-serif;
+  cursor: pointer;
+}
+.header__main__btn-buy:hover {
+  color: #696969;
+  background-color: #FFF;
+}
+.header__main__btn-buy:hover > div > img {
+  filter: drop-shadow(16px 16px 20px red) invert(50%);
 }
 .header__main__btn-buy__icon {
   margin-right: 15px;
@@ -160,6 +194,7 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #F8F8FF;
+  cursor: pointer;
 }
 .categories__icon__table {
   background: url("./img/table.jpg");
@@ -167,6 +202,7 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #F8F8FF;
+  cursor: pointer;
 }
 .categories__icon__sofa {
   background: url("./img/sofa.jpg");
@@ -174,6 +210,7 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #F8F8FF;
+  cursor: pointer;
 }
 .categories__icon__armcher {
   background: url("./img/armcher.jpeg");
@@ -181,6 +218,7 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #F8F8FF;
+  cursor: pointer;
 }
 .categories__icon__bedside-table {
   background: url("./img/bedside-table.jpg");
@@ -188,6 +226,7 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #F8F8FF;
+  cursor: pointer;
 }
 .categories__icon__cher {
   background: url("./img/cher.jpg");
@@ -195,6 +234,7 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #F8F8FF;
+  cursor: pointer;
 }
 .categories__icon__table-kichen {
   background: url("./img/table-kichen.jpg");
@@ -202,6 +242,7 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #F8F8FF;
+  cursor: pointer;
 }
 
 .about-us__wrapper {
@@ -240,6 +281,12 @@ ul {
   justify-content: center;
   background-color: #696969;
   color: #FFF;
+  box-sizing: border-box;
+}
+.about-us__text__btn:hover {
+  background-color: #FFF;
+  color: #696969;
+  border: 3px solid #696969;
 }
 
 .products__wrapper {
@@ -262,6 +309,7 @@ ul {
   text-align: center;
   margin-right: 100px;
   margin-bottom: 60px;
+  cursor: pointer;
 }
 .products__list__cart:nth-child(4n) {
   margin-right: 0;
@@ -350,6 +398,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .reviews__carusel__btn-r {
   width: 47px;
@@ -360,6 +409,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .reviews__carusel__items {
   display: inline-flex;
@@ -457,6 +507,9 @@ div[class^=reviews__carusel__item__] {
   text-decoration: none;
   color: #FFF;
 }
+.footer__list__products__item > a:hover {
+  color: #696969;
+}
 .footer__list__nav__title {
   margin-bottom: 15px;
   font-size: 19px;
@@ -468,6 +521,9 @@ div[class^=reviews__carusel__item__] {
   font-size: 16px;
   text-decoration: none;
   color: #FFF;
+}
+.footer__list__nav__item > a:hover {
+  color: #696969;
 }
 .footer__list__contact__title {
   margin-bottom: 15px;
