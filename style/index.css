@@ -1,3 +1,8 @@
+ul {
+  margin: 0;
+  list-style: none;
+}
+
 .header__wrapper {
   position: relative;
   background: url("./../style/img/header__bg.jpg");
@@ -371,4 +376,112 @@ div[class^=reviews__carusel__item__] {
   height: 20px;
   border-radius: 50%;
   margin-right: 15px;
+}
+
+.footer__wrapper {
+  background: url("./img/footer__bg.jpg");
+  background-size: 100%;
+  background-position: center;
+  font-family: "Unbounded", sans-serif;
+}
+.footer__filter {
+  width: 100%;
+  height: 100%;
+  padding: 50px 80px 10px 80px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+.footer__lists {
+  display: flex;
+  justify-content: space-between;
+  color: #FFF;
+  margin-bottom: 100px;
+}
+.footer__lists__wrapper {
+  display: flex;
+  width: 1000px;
+  justify-content: space-between;
+}
+.footer__doc-pay {
+  color: #FFF;
+}
+.footer__doc-pay__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__doc-pay__var {
+  display: flex;
+}
+.footer__list__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__list__info__links__wrapper {
+  display: flex;
+}
+.footer__list__info__item {
+  margin-right: 15px;
+}
+.footer__list__info__daily__wrapper {
+  display: flex;
+  margin-bottom: 10px;
+}
+.footer__list__info__daily__info {
+  color: #FFF;
+  font-size: 19px;
+  margin-right: 50px;
+}
+.footer__list__info__delivery__info {
+  color: #FFF;
+  font-size: 19px;
+}
+.footer__list__info__logo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+}
+.footer__list__info__logo > img {
+  width: 100%;
+  height: 100%;
+}
+.footer__list__products__title {
+  margin-bottom: 15px;
+  font-size: 19px;
+}
+.footer__list__products__item {
+  margin-bottom: 8px;
+}
+.footer__list__products__item > a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #FFF;
+}
+.footer__list__nav__title {
+  margin-bottom: 15px;
+  font-size: 19px;
+}
+.footer__list__nav__item {
+  margin-bottom: 8px;
+}
+.footer__list__nav__item > a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #FFF;
+}
+.footer__list__contact__title {
+  margin-bottom: 15px;
+  font-size: 19px;
+}
+.footer__list__contact__icon {
+  margin-right: 15px;
+}
+.footer__list__contact__item {
+  margin-bottom: 8px;
+  display: flex;
+}
+.footer__list__contact__item > a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #FFF;
 }
