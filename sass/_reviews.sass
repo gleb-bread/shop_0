@@ -21,17 +21,19 @@
             margin-bottom: 50px
         &__content
             &__wrapper
-                display: flex
-                overflow: hidden
+                // display: flex
                 flex-wrap: nowrap
                 width: 900px
+                overflow: hidden
             &__item-2
                 display: none
             &__item-3
                 display: none
             &__item
+                width:100%
+                position: relative
                 transition-property: all
-                transition-duration: .5s
+                transition-duration: .3s
                 &__description
                     font-size: 19px
                     text-align: justify
@@ -70,13 +72,13 @@
             display: inline-flex
         &__item
             &__no-select
-                background-color: #696969
+                background-color: rgba(0, 0, 0, .1)
             &__select
-                background-color: #232323
+                background-color: rgba(0, 0, 0, .7)
 div[class^="reviews__carusel__item__"]
     width: 20px
     height: 20px
     border-radius: 50%
     margin-right: 15px
     transition-property: all
-    transition-duration: .5s
+    transition-duration: .3s

@@ -1,3 +1,10 @@
+<?php
+	include "./server/connectionDB.php";
+	include "./server/bestProduct.php";
+
+	$infoDB = mysqli_query($resultConntection, "SELECT * FROM `shop__categories`");
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -115,24 +122,17 @@
 	</header>
 	<section class="categories">
 		<div class="categories__wrapper">
-			<div class="categories__icon__sofa categories__icon">
-				<span class="categories__icon__name">Диваны</span>
+			<?php  while($categories = mysqli_fetch_assoc($infoDB)) {?>
+			<div class="categories__icon" style="
+				background: url('<?php echo $categories['img__categories']?>');
+				background-size: 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-color: #F8F8FF;
+				cursor: pointer;">
+				<span class="categories__icon__name"><?php echo $categories['name__categories']?></span>
 			</div>
-			<div class="categories__icon__table categories__icon">
-				<span class="categories__icon__name">Столы</span>
-			</div>
-			<div class="categories__icon__table-kichen categories__icon">
-				<span class="categories__icon__name">Кухонные столы</span>
-			</div>
-			<div class="categories__icon__armcher categories__icon">
-				<span class="categories__icon__name">Кресла</span>
-			</div>
-			<div class="categories__icon__bedside-table categories__icon">
-				<span class="categories__icon__name">Тумбочки</span>
-			</div>
-			<div class="categories__icon__cher categories__icon">
-				<span class="categories__icon__name">Стулья</span>
-			</div>
+			<?php }?>
 		</div>
 	</section>
 	<section class="about-us">
@@ -166,88 +166,42 @@
 				<h3>Топ продаж</h3>
 			</div>
 			<div class="products__list">
-				<div class="products__list__cart">
-					<div class="products__list__cart__icon">
+				<?php  
+					$count = 1;
+					$selectId = array(0,7,14,21,28,35);
+					for($i = 0; $i < 8; $i++) {
+						$indx = $selectId[$count - 1];
+						$product = mysqli_query($resultConntection, "SELECT * FROM `shop__product` WHERE `id__categories`=$count AND `id__product`>$indx  LIMIT 1");
+						$bestProduct = mysqli_fetch_assoc($product);
+						$selectId[$count - 1] += 1;
+						$count += 1;
+						if ($count == 7){
+							$count = 1;
+						}
+					?>
+					<div class="products__list__cart">
+						<div class="products__list__cart__icon" style="
+							background: url('<?php echo $bestProduct['img__product'];?>');
+							background-size: 100%;
+							background-position: center;
+							background-repeat: no-repeat;
+						">
+						</div>
+						<div class="products__list__cart__name">
+							<span><?php echo $bestProduct['name__product'];?></span>
+						</div>
+						<div class="products__list__cart__country">
+							<span><?php echo $bestProduct['country__product']?></span>
+						</div>
+						<div class="products__list__cart__price">
+							<?php echo $bestProduct['price__product']?>&#8381;
+						</div>
 					</div>
-					<div class="products__list__cart__name">
-						<span>Летний столик</span>
-					</div>
-					<div class="products__list__cart__country">
-						<span>Вьетнам</span>
-					</div>
-					<div class="products__list__cart__price">
-						5000&#8381;
-					</div>
-				</div>
-				<div class="products__list__cart">
-					<div class="products__list__cart__icon">
-					</div>
-					<div class="products__list__cart__name">
-						<span>Летний столик</span>
-					</div>
-					<div class="products__list__cart__country">
-						<span>Вьетнам</span>
-					</div>
-					<div class="products__list__cart__price">
-						5000&#8381;
-					</div>
-				</div>
-				<div class="products__list__cart">
-					<div class="products__list__cart__icon">
-					</div>
-					<div class="products__list__cart__name">
-						<span>Летний столик</span>
-					</div>
-					<div class="products__list__cart__country">
-						<span>Вьетнам</span>
-					</div>
-					<div class="products__list__cart__price">
-						5000&#8381;
-					</div>
-				</div>
-				<div class="products__list__cart">
-					<div class="products__list__cart__icon">
-					</div>
-					<div class="products__list__cart__name">
-						<span>Летний столик</span>
-					</div>
-					<div class="products__list__cart__country">
-						<span>Вьетнам</span>
-					</div>
-					<div class="products__list__cart__price">
-						5000&#8381;
-					</div>
-				</div>
-				<div class="products__list__cart">
-					<div class="products__list__cart__icon">
-					</div>
-					<div class="products__list__cart__name">
-						<span>Летний столик</span>
-					</div>
-					<div class="products__list__cart__country">
-						<span>Вьетнам</span>
-					</div>
-					<div class="products__list__cart__price">
-						5000&#8381;
-					</div>
-				</div>
-				<div class="products__list__cart">
-					<div class="products__list__cart__icon">
-					</div>
-					<div class="products__list__cart__name">
-						<span>Летний столик</span>
-					</div>
-					<div class="products__list__cart__country">
-						<span>Вьетнам</span>
-					</div>
-					<div class="products__list__cart__price">
-						5000&#8381;
-					</div>
-				</div>
+				<?php  }?>
 			</div>
 		</div>
 	</section>
-	<section class="reviews">
+	<!-- <section class="reviews">
 		<div class="reviews__wrapper">
 			<div class="reviews__title-s">
 				<h3>Отзывы</h3>
@@ -316,7 +270,7 @@
 				<div class="reviews__carusel__item__btn reviews__carusel__item__no-select"></div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<footer>
 		<div class="footer__wrapper">
 			<div class="footer__filter">
@@ -477,7 +431,7 @@
 			</div>
 		</div>
 	</footer>
-	<script src="./js/karusel.js"></script>
+	<!-- <script src="./js/karusel.js"></script> -->
 </body>
 
 </html>
