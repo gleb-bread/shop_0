@@ -48,7 +48,7 @@ html {
   align-items: center;
 }
 .header__nav__menu__link {
-  color: #FFF;
+  color: #F7F8F9;
   text-decoration: none;
   transition-property: all;
   transition-duration: 0.3s;
@@ -66,7 +66,7 @@ html {
   color: #7A0007;
 }
 .header__nav__wrapper {
-  color: #FFF;
+  color: #F7F8F9;
   height: 100px;
   display: flex;
   align-items: center;
@@ -87,7 +87,7 @@ html {
 }
 .header__search__wrapper {
   display: flex;
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid #F7F8F9;
 }
 .header__search__btn {
   margin-right: 10px;
@@ -99,13 +99,13 @@ html {
   margin: 0;
   padding: 0;
   background-color: rgba(0, 0, 0, 0);
-  color: #FFF;
+  color: #F7F8F9;
 }
 .header__search__input::-moz-placeholder {
-  color: #FFF;
+  color: #F7F8F9;
 }
 .header__search__input::placeholder {
-  color: #FFF;
+  color: #F7F8F9;
 }
 .header__search__input:active, .header__search__input:hover, .header__search__input:focus {
   outline: 0;
@@ -132,7 +132,7 @@ html {
   justify-content: center;
 }
 .header__main__text {
-  color: #FFF;
+  color: #F7F8F9;
   margin-bottom: 50px;
 }
 .header__main__text__wrapper {
@@ -169,8 +169,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFF;
-  border: 3px solid #FFF;
+  color: #F7F8F9;
+  border: 3px solid #F7F8F9;
   width: 200px;
   height: 50px;
   font-family: "Unbounded", sans-serif;
@@ -180,7 +180,7 @@ html {
 }
 .header__main__btn-buy:hover {
   color: #696969;
-  background-color: #FFF;
+  background-color: #F7F8F9;
 }
 .header__main__btn-buy:hover > div > img {
   filter: drop-shadow(16px 16px 20px red) invert(50%);
@@ -252,14 +252,14 @@ html {
   align-items: center;
   justify-content: center;
   background-color: #696969;
-  color: #FFF;
+  color: #F7F8F9;
   box-sizing: border-box;
   transition-property: all;
   transition-duration: 0.2s;
   cursor: pointer;
 }
 .about-us__text__btn:hover {
-  background-color: #FFF;
+  background-color: #F7F8F9;
   color: #696969;
   border: 3px solid #696969;
 }
@@ -428,7 +428,7 @@ div[class^=reviews__carusel__item__] {
 .footer__lists {
   display: flex;
   justify-content: space-between;
-  color: #FFF;
+  color: #F7F8F9;
   margin-bottom: 100px;
 }
 .footer__lists__wrapper {
@@ -437,7 +437,7 @@ div[class^=reviews__carusel__item__] {
   justify-content: space-between;
 }
 .footer__doc-pay {
-  color: #FFF;
+  color: #F7F8F9;
 }
 .footer__doc-pay__wrapper {
   display: flex;
@@ -462,12 +462,12 @@ div[class^=reviews__carusel__item__] {
   margin-bottom: 10px;
 }
 .footer__list__info__daily__info {
-  color: #FFF;
+  color: #F7F8F9;
   font-size: 19px;
   margin-right: 50px;
 }
 .footer__list__info__delivery__info {
-  color: #FFF;
+  color: #F7F8F9;
   font-size: 19px;
 }
 .footer__list__info__logo {
@@ -489,7 +489,7 @@ div[class^=reviews__carusel__item__] {
 .footer__list__products__item > a {
   font-size: 16px;
   text-decoration: none;
-  color: #FFF;
+  color: #F7F8F9;
   transition-property: all;
   transition-duration: 0.3s;
 }
@@ -506,7 +506,7 @@ div[class^=reviews__carusel__item__] {
 .footer__list__nav__item > a {
   font-size: 16px;
   text-decoration: none;
-  color: #FFF;
+  color: #F7F8F9;
 }
 .footer__list__nav__item > a:hover {
   color: #696969;
@@ -525,13 +525,13 @@ div[class^=reviews__carusel__item__] {
 .footer__list__contact__item > a {
   font-size: 16px;
   text-decoration: none;
-  color: #FFF;
+  color: #F7F8F9;
 }
 
 .catalog__wrapper {
   padding: 220px 80px 50px 80px;
   font-family: "Unbounded", sans-serif;
-  background-color: #FFF;
+  background-color: #F7F8F9;
   flex-wrap: wrap;
 }
 .catalog__cart {
@@ -539,12 +539,17 @@ div[class^=reviews__carusel__item__] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e4dddd;
+  background-color: #FFF;
   text-align: center;
   width: 300px;
   margin-bottom: 20px;
   cursor: pointer;
   box-sizing: border-box;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+.catalog__cart:hover {
+  box-shadow: 5px 5px 15px black;
 }
 .catalog__cart__wrapper {
   display: flex;
@@ -581,7 +586,7 @@ div[class^=reviews__carusel__item__] {
 }
 .catalog__btn-active {
   background-color: #696969;
-  color: #FFF;
+  color: #F7F8F9;
   padding: 5px 5px;
   border-radius: 20%;
 }
@@ -598,4 +603,80 @@ div[class^=reviews__carusel__item__] {
 .catalog__btn__wrapper {
   display: flex;
   justify-content: end;
+}
+
+.product-page__btn-back {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.product-page__btn-back > a {
+  color: #696969;
+  text-decoration: none;
+}
+.product-page__wrapper {
+  background-color: #F7F8F9;
+  display: flex;
+  flex-direction: column;
+  padding: 220px 80px 50px 80px;
+  font-family: "Unbounded", sans-serif;
+}
+.product-page__information__wrapper {
+  display: flex;
+}
+.product-page__information__img__main {
+  background: url("./img/product/armchair/armchair1.jpg");
+  background-size: 100%;
+  position: center;
+  height: 400px;
+  width: 600px;
+  background-repeat: no-repeat;
+}
+.product-page__information__img__main__wrapper {
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.product-page__information__img__additional {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+.product-page__information__img__additional > img {
+  width: 100%;
+  height: 100%;
+}
+.product-page__information__img__additional__wrapper {
+  display: flex;
+  align-items: center;
+}
+.product-page__information__img__additional__btn-left {
+  cursor: pointer;
+  height: 20px;
+  padding: 10px;
+  border: 2px solid #cfd1cd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.product-page__information__img__additional__btn-right {
+  cursor: pointer;
+  height: 20px;
+  padding: 10px;
+  border: 2px solid #cfd1cd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.product-page__information__img__additional__container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 20px;
+  width: 600px;
 }
