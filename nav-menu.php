@@ -1,5 +1,5 @@
-<?php ?>
-    <div class="header__nav__wrapper">
+<?php function createNavMenu($navMenuClass) {?>
+    <div class="header__nav__wrapper <?php echo $navMenuClass ?>">
         <nav class="header__nav">
             <ul class="header__nav__menu">
                 <li class="header__nav__menu__item">
@@ -45,4 +45,4 @@
             </div>
         </div>
     </div>
-<?php ?>
+<?php }?>

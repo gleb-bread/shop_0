@@ -2,20 +2,26 @@
     &__wrapper
         padding: 220px 80px 50px 80px
         font-family: "Unbounded", sans-serif
+        background-color: $lightColor
         flex-wrap: wrap
     &__cart
         padding: 15px 10px
-        background-color: #F8F8FF
+        display: flex
+        flex-direction: column
+        align-items: center
+        background-color: #e4dddd
         text-align: center
+        width: 300px
         margin-bottom: 20px
         cursor: pointer
+        box-sizing: border-box
         &__wrapper
             display: flex
             flex-wrap: wrap
             justify-content: space-between
         &__icon
             margin-bottom: 20px
-            width: 300px
+            width: 100%
             height: 300px
         &__name
             font-size: 21px
@@ -27,10 +33,29 @@
             font-size: 21px
     &__btn
         text-align: center
+        width: 30px
         color: $darkColor
         text-decoration: none
         margin-right: 10px
+        padding: 5px 5px
+        border: 3px solid $darkColor
+        box-sizing: border-box
+        border-radius: 20%
         display: block
+        &-active
+            background-color: $darkColor
+            color: $lightColor
+            padding: 5px 5px
+            border-radius: 20%
+        &__skip
+            text-align: center
+            width: 30px
+            color: $darkColor
+            text-decoration: none
+            margin-right: 10px
+            padding: 5px 5px
+            box-sizing: border-box
+            display: block
         &__wrapper
             display: flex
             justify-content: end

@@ -9,7 +9,9 @@
 	<div class="header__wrapper">
 		<div class="header__filter">
 			
-			<?php include "./nav-menu.php";?>
+			<?php include "./nav-menu.php";
+				createNavMenu('header__nav__wrapper-main');
+			?>
 
 			<div class="header__main">
 				<div class="header__main__wrapper">
