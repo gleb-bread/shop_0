@@ -622,6 +622,8 @@ div[class^=reviews__carusel__item__] {
 }
 .product-page__information__wrapper {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 .product-page__information__img__main {
   background: url("./img/product/armchair/armchair1.jpg");
@@ -644,10 +646,15 @@ div[class^=reviews__carusel__item__] {
   width: 100px;
   height: 100px;
   cursor: pointer;
+  border-radius: 20px;
 }
 .product-page__information__img__additional > img {
   width: 100%;
   height: 100%;
+  border-radius: 20px;
+}
+.product-page__information__img__additional-active {
+  border: 2px solid #7A0007;
 }
 .product-page__information__img__additional__wrapper {
   display: flex;
@@ -679,4 +686,125 @@ div[class^=reviews__carusel__item__] {
   justify-content: space-evenly;
   margin-right: 20px;
   width: 600px;
+}
+.product-page__information__description__wrapper {
+  width: 900px;
+}
+.product-page__information__description__title {
+  font-size: 36px;
+  color: #7A0007;
+}
+.product-page__information__description__title__wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.product-page__information__description__price {
+  font-size: 25px;
+  color: #696969;
+  display: flex;
+  align-items: flex-end;
+}
+.product-page__information__description__reviews__wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.product-page__information__description__reviews__value {
+  font-size: 10px;
+  color: #696969;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.product-page__information__description__reviews__score {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.product-page__information__description__text__wrapper {
+  text-align: justify;
+  font-size: 19px;
+}
+.product-page__information__description__quantity__wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.product-page__information__description__quantity__title {
+  margin-right: 10px;
+}
+.product-page__information__description__quantity__value {
+  margin-right: 10px;
+}
+.product-page__information__description__quantity__value__wrapper {
+  display: flex;
+  width: 200px;
+  align-items: center;
+}
+.product-page__information__description__quantity__btn-min {
+  cursor: pointer;
+  padding: 9px 8px;
+  border: 2px solid #cfd1cd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+.product-page__information__description__quantity__btn-max {
+  cursor: pointer;
+  padding: 9px 8px;
+  border: 2px solid #cfd1cd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.product-page__information__description__btn-buy {
+  font-size: 19px;
+  color: #F7F8F9;
+  background-color: #000;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  transition-property: all;
+  transition-duration: 0.3s;
+  width: 300px;
+  text-align: center;
+}
+.product-page__specifications__title {
+  color: #000;
+  border-bottom: 4px solid #cfd1cd;
+  text-align: center;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+.product-page__specifications__title > span {
+  text-size: 19px;
+  display: block;
+  padding: 0 20px;
+}
+.product-page__specifications__title-active {
+  text-size: 19px;
+  color: #000;
+  border-bottom: 4px solid #696969;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+.product-page__specifications__title-active > span {
+  text-size: 19px;
+  display: block;
+  padding: 0 20px;
+}
+.product-page__specifications__title__wrapper {
+  display: flex;
+}
+.product-page__specifications__description__wrapper {
+  text-align: justify;
+}
+.product-page__specifications__description__text {
+  display: none;
 }
