@@ -9,7 +9,7 @@
                     <a href="" class="header__nav__menu__link">Скидки</a>
                 </li>
                 <li class="header__nav__menu__item">
-                    <a href="#" class="header__nav__menu__link">О нас</a>
+                    <a href="index.php" class="header__nav__menu__link">О нас</a>
                 </li>
                 <li li class="header__nav__menu__item">
                     <a href="#footer" class="header__nav__menu__link">Контакты</a>

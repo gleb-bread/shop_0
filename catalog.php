@@ -54,6 +54,7 @@
 	<section class="catalog">
 			<?php returnProduct($resultConntection, 10); ?>
 	</section>
+	<script src="./js/openProduct-page.js"></script>
 <?php 
 		include "./footer.php";
 		include "./server/connectScript.php"
