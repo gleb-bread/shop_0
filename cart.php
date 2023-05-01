@@ -9,7 +9,7 @@
     $countPrice = 0;
 ?>
 <section class="cart">
-<div class="cart__wrapper">
+<div class="cart__wrapper__container">
     <div class="cart__wrapper">
         <div class="cart__item__title">
             <div class="cart__item__block__1">
@@ -73,11 +73,32 @@
         <?php }
          else {
         ?>
-            В корзине пока ничего нет.
+            <div class="cart__item__empy">В корзине пока ничего нет.</div> 
         <?php }?>
+        <div class="modal__window">
+            <div class="modal__window__wrapper">
+                <div class="modal__window__exit">
+                    <img src="./style/img/exit.svg" alt="" srcset="">
+                </div>
+                <div class="modal__window__message">
+                    <div class="modal__window__message__icon">
+                        <div class="modal__window__message__icon__seccess">
+                            <img src="./style/img/success.svg" alt="" srcset="">
+                        </div>
+                        <div class="modal__window__message__icon__warning">
+                            <img src="./style/img/warning.svg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="modal__window__message__text"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <?php
     include "./footer.php";
+?>
+    <script src="./js/buyProduct.js"></script>
+<?php
     include "./server/connectScript.php"
 ?>

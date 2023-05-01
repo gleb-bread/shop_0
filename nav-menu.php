@@ -39,7 +39,7 @@
                         <img src="./style/img/header__user.svg" alt="Icon user">
                     </div>
                     <div class="header__icons__basket">
-                        <img src="./style/img/header__basket.svg" alt="Icon basket">
+                        <a href="./cart.php"><img src="./style/img/header__basket.svg" alt="Icon basket"></a>
                         <div class="header__icons__basket__count-product"></div>
                     </div>
                 </div>
