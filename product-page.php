@@ -120,7 +120,6 @@
 		<script src="./js/product-pageChangeValue.js"></script>
 		<script src="./js/product-pageChangePhoto.js"></script>
 		<script src="./js/product-pageBackPage.js"></script>
-		<script src="./js/addProductToCart.js"></script>
 	<?php
 		mysqli_close($resultConntection);
 		include "./server/connectScript.php"

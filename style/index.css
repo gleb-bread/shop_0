@@ -6,10 +6,15 @@ ul {
 body {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #F7F8F9;
+  height: 100%;
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 .header__wrapper {
@@ -134,7 +139,10 @@ html {
   font-size: 9px;
   border-radius: 50%;
   align-items: center;
-  padding: 3px;
+  width: 15px;
+  height: 15px;
+  justify-content: center;
+  align-items: center;
   display: none;
 }
 .header__main__wrapper {
@@ -817,4 +825,86 @@ div[class^=reviews__carusel__item__] {
 }
 .product-page__specifications__description__text {
   display: none;
+}
+.cart {
+  height: 100vh;
+}
+.cart__wrapper {
+  background-color: #F7F8F9;
+  padding: 120px 80px 50px 80px;
+  font-family: "Unbounded", sans-serif;
+}
+.cart__item {
+  justify-content: space-between;
+  padding: 30px 20px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.cart__item__title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #cfd1cd;
+  padding: 0 20px 0 20px;
+  margin-bottom: 30px;
+}
+.cart__item__title > div > div {
+  height: auto;
+}
+.cart__item__icon {
+  width: 100px;
+  height: 100px;
+  margin-right: 50px;
+}
+.cart__item__icon > img {
+  width: 100%;
+  height: 100%;
+}
+.cart__item__name {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+}
+.cart__item__count {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+.cart__item__price {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+.cart__item__block__1 {
+  align-items: center;
+  display: flex;
+}
+.cart__item__block__2 {
+  align-items: center;
+  display: flex;
+}
+.cart__final-price {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+  font-size: 19px;
+}
+.cart__final-price > p {
+  margin-right: 20px;
+}
+.cart__btn-buy {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: 230px;
+  padding: 30px 30px;
+  color: #F7F8F9;
+  background-color: #696969;
+  font-size: 19px;
+}
+.cart__btn-buy__wrapper {
+  display: flex;
+  justify-content: flex-end;
 }

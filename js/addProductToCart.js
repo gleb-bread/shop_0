@@ -1,7 +1,7 @@
 $(document).ready(function(){
     if (localStorage.getItem('countProdOnCart')){
         $('.header__icons__basket__count-product').text(localStorage.getItem('countProdOnCart'));
-        $('.header__icons__basket__count-product').css('display', 'block');
+        $('.header__icons__basket__count-product').css('display', 'flex');
     }
     $('.product-page__information__description__btn-buy').click(function(){
         let countProduct = $('.product-page__information__description__quantity__value > span').text();

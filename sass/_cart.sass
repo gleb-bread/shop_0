@@ -1,0 +1,68 @@
+.cart
+    height: 100vh
+    &__wrapper
+        background-color: $lightColor
+        padding: 120px 80px 50px 80px
+        font-family: "Unbounded", sans-serif
+    &__item
+        justify-content: space-between
+        padding: 30px 20px
+        background-color: #fff
+        display: flex
+        align-items: center
+        margin-bottom: 40px
+        &__title
+            display: flex
+            justify-content: space-between
+            border-bottom: 3px solid $grayColor
+            padding: 0 20px 0 20px
+            margin-bottom: 30px
+            &>div>div
+                height: auto
+        &__icon
+            width: 100px
+            height: 100px
+            margin-right: 50px
+            &>img
+                width: 100%
+                height: 100%
+        &__name
+            width: 300px
+            display: flex
+            justify-content: center
+            font-size: 25px
+        &__count
+            width: 300px
+            display: flex
+            justify-content: center
+        &__price
+            width: 300px
+            display: flex
+            justify-content: center
+        &__block
+            &__1
+                align-items: center
+                display: flex
+            &__2
+                align-items: center
+                display: flex
+    &__final-price
+        display: flex
+        justify-content: flex-end
+        margin-bottom: 40px
+        font-size: 19px
+        &>p
+            margin-right: 20px
+    &__btn-buy
+        display: flex
+        justify-content: center
+        cursor: pointer
+        width: 230px
+        padding: 30px 30px
+        color: $lightColor
+        background-color: $darkColor
+        font-size: 19px
+        &__wrapper
+            display: flex
+            justify-content: flex-end
+
