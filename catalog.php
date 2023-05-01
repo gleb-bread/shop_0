@@ -3,7 +3,6 @@
 	include "./server/bestProduct.php";
 	include "./header.php";
 	include "./nav-menu.php";
-	createNavMenu('');
 	function returnProduct($resultConntection, $limitProd){
 		$productAll = mysqli_query($resultConntection, "SELECT * FROM `shop__product`");
 		$countAllProduct = mysqli_num_rows($productAll);

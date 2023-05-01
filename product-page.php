@@ -3,7 +3,6 @@
 	include "./server/bestProduct.php";
 	include "./header.php";
 	include "./nav-menu.php";
-	createNavMenu('');
 	function returnProduct($resultConntection){
 		$pageCatalog = $_GET['page'];
 		$idProduct = $_GET['product'];

@@ -123,6 +123,19 @@ html {
 }
 .header__icons__basket {
   cursor: pointer;
+  position: relative;
+}
+.header__icons__basket__count-product {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #7A0007;
+  font-family: "Unbounded", sans-serif;
+  font-size: 9px;
+  border-radius: 50%;
+  align-items: center;
+  padding: 3px;
+  display: none;
 }
 .header__main__wrapper {
   padding: 120px 80px 50px 80px;

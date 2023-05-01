@@ -3,6 +3,7 @@
 	if (!isset($_COOKIE['id__session'])){
 		$_SESSION['id__session'] = uniqid();
 		setcookie('id__session', $_SESSION['id__session'], 0, '/');
+		setcookie('count__product', 0, 0, '/');
 	}else {
 		$_SESSION['id__session'] = $_COOKIE['id__session'];
 	}
@@ -16,11 +17,7 @@
 <header>
 	<div class="header__wrapper">
 		<div class="header__filter">
-			
-			<?php include "./nav-menu.php";
-				createNavMenu('header__nav__wrapper-main');
-			?>
-
+			<?php include "./nav-menu.php";?>
 			<div class="header__main">
 				<div class="header__main__wrapper">
 					<div class="header__main__text__wrapper">

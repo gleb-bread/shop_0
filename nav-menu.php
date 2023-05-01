@@ -1,5 +1,5 @@
-<?php function createNavMenu($navMenuClass) {?>
-    <div class="header__nav__wrapper <?php echo $navMenuClass ?>">
+<?php ?>
+    <div class="header__nav__wrapper">
         <nav class="header__nav">
             <ul class="header__nav__menu">
                 <li class="header__nav__menu__item">
@@ -40,9 +40,10 @@
                     </div>
                     <div class="header__icons__basket">
                         <img src="./style/img/header__basket.svg" alt="Icon basket">
+                        <div class="header__icons__basket__count-product"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<?php }?>
+<?php ?>
