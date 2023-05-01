@@ -626,12 +626,8 @@ div[class^=reviews__carusel__item__] {
   margin-bottom: 50px;
 }
 .product-page__information__img__main {
-  background: url("./img/product/armchair/armchair1.jpg");
-  background-size: 100%;
-  position: center;
   height: 400px;
   width: 600px;
-  background-repeat: no-repeat;
 }
 .product-page__information__img__main__wrapper {
   padding: 20px;
@@ -772,6 +768,7 @@ div[class^=reviews__carusel__item__] {
   transition-duration: 0.3s;
   width: 300px;
   text-align: center;
+  cursor: pointer;
 }
 .product-page__specifications__title {
   color: #000;

@@ -1,4 +1,12 @@
 <?php
+	session_start();
+	if (!isset($_COOKIE['id__session'])){
+		$_SESSION['id__session'] = uniqid();
+		setcookie('id__session', $_SESSION['id__session'], 0, '/');
+	}else {
+		$_SESSION['id__session'] = $_COOKIE['id__session'];
+	}
+	
 	include "./server/connectionDB.php";
 	include "./server/bestProduct.php";
 
@@ -122,7 +130,7 @@
 						$count = 1;
 					}
 				?>
-				<div class="products__list__cart">
+				<div class="products__list__cart" id="product__<?php echo $bestProduct['id__product'];?>">
 					<div class="products__list__cart__icon" style="
 						background: url('<?php echo $bestProduct['img__product'];?>');
 						background-size: 100%;
@@ -215,6 +223,7 @@
 	</div>
 </section> -->
 <?php 
+	mysqli_close($resultConntection);
 	include "./footer.php";
 	include "./server/connectScript.php"
 ?>

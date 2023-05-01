@@ -4,16 +4,25 @@
 	include "./header.php";
 	include "./nav-menu.php";
 	createNavMenu('');
-	function returnProduct($resultConntection, $limitProd){?>
+	function returnProduct($resultConntection){
+		$pageCatalog = $_GET['page'];
+		$idProduct = $_GET['product'];
+		$product = mysqli_query($resultConntection,"SELECT * FROM `shop__product` WHERE `id__product`=$idProduct");
+		$infoProduct = mysqli_fetch_assoc($product);
+		$productDescription = mysqli_query($resultConntection,"SELECT * FROM `shop__description` WHERE `id__product`=$idProduct");
+		$infoProductDescription = mysqli_fetch_assoc($productDescription);
+		?>
 		<div class="product-page__wrapper">
 			<div class="product-page__btn-back">
-				<img src="./style/img/back.svg" alt="">
-				<a>Назад</a>
+				<img src="./style/img/back.svg" class = "product-page__btn-back__img"alt="">
+				<a href="http://shop/catalog.php?page=<?php echo $pageCatalog?>">Назад</a>
 			</div>
 			<div class="product-page__information__wrapper">
 				<div class="product-page__information__img__wrapper">
 					<div class="product-page__information__img__main__wrapper">
-						<div class="product-page__information__img__main"></div>
+						<div class="product-page__information__img__main"
+						style="background: center / 70% url(<?php echo $infoProduct["img__product"];?>) no-repeat"
+						></div>
 					</div>
 					<div class="product-page__information__img__additional__wrapper">
 						<div class="product-page__information__img__additional__btn-left">
@@ -22,7 +31,7 @@
 						<div class="product-page__information__img__additional__container">
 							<div class="product-page__information__img__additional product-page__information__img__additional-active" 
 							data-value = "1">
-								<img src="./style/img/product/armchair/armchair1.jpg" alt="" srcset="">
+								<img src="<?php echo $infoProduct["img__product"];?>" alt="" srcset="">
 							</div>
 							<div class="product-page__information__img__additional" data-value = "2">
 								<img src="./style/img/product/armchair/armchair2.jpg" alt="" srcset="">
@@ -42,16 +51,16 @@
 				<div class="product-page__information__description__wrapper">
 					<div class="product-page__information__description__title__wrapper">
 						<div class="product-page__information__description__title">
-							<span>Кресло креслое</span></div>
+							<span><?php echo $infoProduct["name__product"];?></span></div>
 						<div class="product-page__information__description__price"> 
-							<span>15000&#8381;</span></div>
+							<span><?php echo $infoProduct["price__product"];?>&#8381;</span></div>
 					</div>
 					<div class="product-page__information__description__reviews__wrapper">
 						<div class="product-page__information__description__reviews__score">5 звезд</div>
 						<div class="product-page__information__description__reviews__value"><span>13 отзывов</span></div>
 					</div>
 					<div class="product-page__information__description__text__wrapper">
-						<p class="product-page__information__description__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sint, veritatis pariatur atque impedit aspernatur culpa accusamus dolorem magnam doloribus? Aperiam, reprehenderit tenetur repellendus natus dolorum maiores fugit voluptatum culpa officia eos laudantium minima, totam nobis obcaecati rerum, quas magni voluptas cum. Perspiciatis quis illo mollitia consectetur, quos eum consequuntur.</p>
+						<p class="product-page__information__description__text"><?php echo $infoProductDescription["description__product"] ?></p>
 					</div>
 					<div class="product-page__information__description__quantity__wrapper">
 						<div class="product-page__information__description__quantity__title">Количество:</div>
@@ -59,7 +68,9 @@
 							<div class="product-page__information__description__quantity__btn-min">
 								<img src="./style/img/total__btn-min.svg" alt="" srcset="">
 							</div>
-							<div class="product-page__information__description__quantity__value">
+							<div class="product-page__information__description__quantity__value"
+							data-maxValue="<?php echo $infoProduct['count__product']?>"
+							>
 								<span> 0 </span>
 							</div>
 							<div class="product-page__information__description__quantity__btn-max">
@@ -82,8 +93,13 @@
 						</div>
 					</div>
 					<div class="product-page__specifications__description__wrapper">
-						<p class="product-page__specifications__description__text-active product-page__specifications__description__text__1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus dolorum doloremque distinctio optio aliquid commodi magni porro esse delectus, dolore dignissimos quam earum id est quisquam ullam quae perferendis dicta nesciunt ut beatae itaque necessitatibus iure? Pariatur repellendus vel numquam esse iusto debitis porro, dicta facilis, suscipit quos, quam placeat!</p>
-						<p class="product-page__specifications__description__text product-page__specifications__description__text__2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae quisquam sapiente iste. Nesciunt eum similique quasi aspernatur neque doloribus error voluptatum eveniet, vitae inventore beatae cum numquam nostrum perspiciatis temporibus.</p>
+						<div class="product-page__specifications__description__text-active product-page__specifications__description__text__1">
+							<p>Материал изделия: <?php echo $infoProduct["material__product"];?></p>
+							<p>Страна производитель: <?php echo $infoProduct["country__product"];?></p>
+						</div>
+						<div class="product-page__specifications__description__text product-page__specifications__description__text__2">
+							<p>Пока здесь нет отзывов</p>
+						</div>
 					</div>
 			</div>
 		</div>
@@ -94,15 +110,19 @@
 		?>
 	
 	<section class="product-page">
-			<?php returnProduct($resultConntection, 10); ?>
+			<?php returnProduct($resultConntection); ?>
 	</section>
 	<?php 
+		include "./server/addToCart.php";
 		include "./footer.php";
 	?>
 		<script src="./js/product-pageSpecWidth.js"></script>
 		<script src="./js/product-pageSpecHide.js"></script>
 		<script src="./js/product-pageChangeValue.js"></script>
 		<script src="./js/product-pageChangePhoto.js"></script>
+		<script src="./js/product-pageBackPage.js"></script>
+		<script src="./js/addProductToCart.js"></script>
 	<?php
+		mysqli_close($resultConntection);
 		include "./server/connectScript.php"
 	?>
