@@ -18,6 +18,7 @@
             position: fixed
             width: 100%
             background-color: rgba(0, 0, 0, 0)
+            z-index: 10
             
         &__menu
             margin: 0
@@ -164,19 +165,32 @@
                 align-items: center
                 justify-content: center
                 color: $lightColor
-                border: 3px solid $lightColor
                 width:  200px
                 height: 50px
                 font-family: "Unbounded", sans-serif
                 cursor: pointer
                 transition-property: all
                 transition-duration: .2s
-                &:hover
-                    color: $darkColor
-                    background-color: $lightColor
-                    &>div
-                        &>img
-                            filter:  drop-shadow(16px 16px 20px red) invert(50%)
+                &__link
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    color: $lightColor
+                    border: 3px solid $lightColor
+                    width:  200px
+                    height: 50px
+                    font-family: "Unbounded", sans-serif
+                    cursor: pointer
+                    transition-property: all
+                    transition-duration: .2s
+                    text-decoration: none
+                    &:hover
+                        &>div
+                            background-color: $lightColor
+                            color: $darkColor
+                            &>div
+                                &>img
+                                    filter:  drop-shadow(16px 16px 20px red) invert(50%)
 
                 &__icon
                     margin-right: 15px

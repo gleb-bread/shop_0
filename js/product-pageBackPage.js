@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let prot = window.location.href.split('product-page.php')[0];
             let newUrl = prot + 'catalog.php' + `?page=${page}`;
             window.location.href = newUrl;
+            urlParam = null;
         }
     })
 });

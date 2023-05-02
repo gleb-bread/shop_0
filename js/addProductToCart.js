@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    let idTimeout;
     if (Number(localStorage.getItem('countProdOnCart'))){
         $('.header__icons__basket__count-product').text(localStorage.getItem('countProdOnCart'));
         $('.header__icons__basket__count-product').css('display', 'flex');
@@ -35,7 +36,27 @@ $(document).ready(function(){
                     });
                 },
             });
-            
+            $('.modal__window__message__icon__seccess').css('display','block');
+            $('.modal__window__message__text').text('Товар добавлен в карзину!');
+            $('.modal__window').slideDown();
+            idTimeout = setTimeout(() => {
+                $('.modal__window').slideUp();
+                $('.modal__window__message__icon__seccess').css('display','none');
+            },3000);
+        } else if (countProduct > maxCountProduct) {
+            $('.modal__window__message__icon__warning').css('display','block');
+            $('.modal__window__message__text').text('На складе нет такого количество товара!');
+            $('.modal__window').slideDown();
+            idTimeout = setTimeout(() => {
+                $('.modal__window').slideUp();
+                $('.modal__window__message__icon__warning').css('display','none');
+            },3000);
         }
+    });
+    $('.modal__window__exit').on('click', () => {
+        clearTimeout(idTimeout);
+        $('.modal__window').slideUp();
+        $('.modal__window__message__icon__seccess').css('display','none');
+        $('.modal__window__message__icon__warning').css('display','none');
     });
 });

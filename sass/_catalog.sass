@@ -1,5 +1,10 @@
 .catalog
+    &__title
+        font-size: 32px
+        color: $redColor
+        margin-bottom: 40px
     &__wrapper
+        box-shadow: border-box
         padding: 220px 80px 50px 80px
         font-family: "Unbounded", sans-serif
         background-color: $lightColor
@@ -63,3 +68,69 @@
         &__wrapper
             display: flex
             justify-content: end
+    &__filter
+        &__title
+            &>h2
+                font-size: 32px
+        &__line
+            width: 100%
+            border-bottom: 3px solid $darkColor
+        &__filter
+            width: 100%
+            height: 100%
+            padding: 30px
+            color: $grayColor
+            font-size: 19px
+            box-sizing: border-box
+            border-radius: 5px
+            background-color: rgba(0,0,0, .5)
+        &__categories
+            &__wrapper
+                display: flex
+                overflow: hidden
+                margin-bottom: 30px
+            &__cart
+                width: 250px
+                height: 150px
+                margin-right: 20px
+                cursor: pointer
+                &:last-child
+                    margin-right: 0
+                &__btn
+                    width: 20px
+                    height: 20px
+                    border-radius: 50%
+                    background-color: $darkColor
+                    &-active
+                        width: 20px
+                        height: 20px
+                        border-radius: 50%
+                        background-color: $redColor
+                    &__wrapper
+                        display: flex
+                        justify-content: center
+                        width: 100%
+                        margin-bottom: 30px
+                    &__container
+                        width: 250px
+                        display: flex
+                        justify-content: center
+        &__comboBox
+            margin-bottom: 30px
+            display: flex
+            justify-content: space-between
+            &__wrapper
+                display: flex
+                align-items: center
+            &__title
+                margin-right: 5px
+            &__container
+                padding: 10px 10px
+            &__btn
+                &__start
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border: 3px solid $darkColor
+                    width: 250px
+                    cursor: pointer

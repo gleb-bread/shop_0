@@ -55,12 +55,14 @@
 							</div>
 						</div>
 					</div>
-					<div class="header__main__btn-buy">
-						<div class="header__main__btn-buy__icon">
-							<img src="./style/img/header__basket.svg" alt="Icon basket">
+					<a href="./catalog.php?page=0" class="header__main__btn-buy__link">
+						<div class="header__main__btn-buy">
+							<div class="header__main__btn-buy__icon">
+								<img src="./style/img/header__basket.svg" alt="Icon basket">
+							</div>
+							<span>Купить сейчас</span>
 						</div>
-						<span class="header__main__btn-buy__text">Купить сейчас</span>
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -102,9 +104,6 @@
 				Основным материалом, использованным в коллекции, является натуральное дерево, которое придает мебели
 				естественность и уютность. Вся мебель выполнена в светлых тонах, таких как белый, бежевый и
 				светло-серый, что создает атмосферу света и пространства.</p>
-			<div class="about-us__text__btn">
-				Подробнее
-			</div>
 		</div>
 	</div>
 </section>
@@ -222,5 +221,8 @@
 <?php 
 	mysqli_close($resultConntection);
 	include "./footer.php";
+?>
+	<script src="./js/openProductIndexPage.js"></script>
+<?php
 	include "./server/connectScript.php"
 ?>

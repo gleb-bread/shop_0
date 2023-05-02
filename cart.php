@@ -23,7 +23,7 @@
             </div>
         </div>
         <?php while($infoCartItem = mysqli_fetch_assoc($getInfoCart)){?>
-        <div class="cart__item">
+        <div class="cart__item" id = "product__<?php echo $infoCartItem['id__product']?>">
             <div class="cart__item__block__1">
                 <div class="cart__item__icon">
                     <img src="<?php
@@ -55,6 +55,9 @@
                     $infoCartItem['count__product']  * $priceProduct['price__product']);
                     $countPrice += $infoCartItem['count__product']  * $priceProduct['price__product'];
                     ?></div>
+            </div>
+            <div class="cart__item__delete" id = "delete__<?php echo $infoCartItem['id__product']?>">
+                <img src="./style/img/delete.svg" alt="" srcset="">
             </div>
         </div>
         <?php 
@@ -91,6 +94,10 @@
                     </div>
                     <div class="modal__window__message__text"></div>
                 </div>
+                <div class="modal__window__message__btn">
+                    <div class="modal__window__message__btn__yes">Да</div>
+                    <div class="modal__window__message__btn__no">Нет</div>
+                </div>
             </div>
         </div>
     </div>
@@ -99,6 +106,7 @@
     include "./footer.php";
 ?>
     <script src="./js/buyProduct.js"></script>
+    <script src="./js/deleteProduct.js"></script>
 <?php
     include "./server/connectScript.php"
 ?>

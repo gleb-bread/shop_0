@@ -14,7 +14,12 @@
 		<div class="product-page__wrapper">
 			<div class="product-page__btn-back">
 				<img src="./style/img/back.svg" class = "product-page__btn-back__img"alt="">
-				<a href="http://shop/catalog.php?page=<?php echo $pageCatalog?>">Назад</a>
+				<a href="<?php 
+					if(isset($pageCatalog)){
+						echo "http://shop/catalog.php?page=$pageCatalog";
+					} else {
+						echo "http://shop/index.php";
+					}?>">Назад</a>
 			</div>
 			<div class="product-page__information__wrapper">
 				<div class="product-page__information__img__wrapper">
@@ -101,6 +106,24 @@
 						</div>
 					</div>
 			</div>
+			<div class="modal__window">
+				<div class="modal__window__wrapper">
+					<div class="modal__window__exit">
+						<img src="./style/img/exit.svg" alt="" srcset="">
+					</div>
+					<div class="modal__window__message">
+						<div class="modal__window__message__icon">
+							<div class="modal__window__message__icon__seccess">
+								<img src="./style/img/success.svg" alt="" srcset="">
+							</div>
+							<div class="modal__window__message__icon__warning">
+								<img src="./style/img/warning.svg" alt="" srcset="">
+							</div>
+						</div>
+						<div class="modal__window__message__text"></div>
+					</div>
+				</div>
+        	</div>
 		</div>
 		
 		

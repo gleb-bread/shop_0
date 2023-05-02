@@ -1,5 +1,6 @@
 "use strict"
 $(document).ready(function(){
+    let idTimeOut;
     $('.cart__btn-buy').on('click', function(){
         $.ajax({
             url: './../server/buyProduct.php',
@@ -18,7 +19,7 @@ $(document).ready(function(){
                     $('.modal__window__message__icon__seccess').css('display','block');
                     $('.modal__window__message__text').text('Спасибо за покупку!');
                     $('.modal__window').slideDown(300);
-                    setTimeout(() => {
+                    idTimeOut = setTimeout(() => {
                         $('.modal__window').slideUp(300);
                         $('.modal__window__message__icon__seccess').css('display','none');
                     },3000);
@@ -26,7 +27,7 @@ $(document).ready(function(){
                     $('.modal__window__message__icon__warning').css('display','block');
                     $('.modal__window__message__text').text('Что то пошло не так!');
                     $('.modal__window').slideDown(300);
-                    setTimeout(() => {
+                    idTimeOut = setTimeout(() => {
                         $('.modal__window').slideUp(300);
                         $('.modal__window__message__icon__warning').css('display','none');
                     },3000);
@@ -35,8 +36,10 @@ $(document).ready(function(){
         });
     });
     $('.modal__window__exit').on('click', () => {
-        $('.modal__window').slideUp(300);
+        clearTimeout(idTimeOut);
+        $('.modal__window').slideUp();
         $('.modal__window__message__icon__seccess').css('display','none');
         $('.modal__window__message__icon__warning').css('display','none');
+        $('.modal__window__message__btn').css('display','none');
     });
 });

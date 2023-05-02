@@ -1,11 +1,12 @@
 .cart
-    height: 100vh
+    flex: 1 0 auto
     &__wrapper
         &__container
             background-color: $lightColor
             padding: 220px 110px 50px 110px
             font-family: "Unbounded", sans-serif
     &__item
+        position: relative
         justify-content: space-between
         padding: 30px 20px
         background-color: #fff
@@ -50,6 +51,16 @@
             &__2
                 align-items: center
                 display: flex
+        &__delete
+            width: 30px
+            height: 30px
+            position: absolute
+            left: 102%
+            top: 43%
+            cursor: pointer
+            &>img
+                width: 100%
+                height: 100%
     &__final-price
         display: flex
         justify-content: flex-end
@@ -108,6 +119,29 @@
                     &>img
                         width:100%
                         height: 100%
+            &__btn
+                display: flex
+                width: 100%
+                justify-content: space-around
+                display: none
+                &__yes
+                    width: 100px
+                    height: 50px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 18px
+                    cursor: pointer
+                    border: 3px solid $darkColor
+                &__no
+                    width: 100px
+                    height: 50px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 18px
+                    cursor: pointer
+                    border: 3px solid $darkColor
         &__wrapper
             display: flex
             flex-direction: column
@@ -125,3 +159,5 @@
                 display: block
                 width: 100%
                 height: 100%
+.modal__window__message__btn[style*='display: block']
+    display: flex !important
